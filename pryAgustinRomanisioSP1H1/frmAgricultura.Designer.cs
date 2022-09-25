@@ -36,6 +36,9 @@
             this.produccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cultivosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produccionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,9 +95,34 @@
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.localidadesToolStripMenuItem1,
+            this.cultivosToolStripMenuItem1,
+            this.produccionToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // localidadesToolStripMenuItem1
+            // 
+            this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
+            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.localidadesToolStripMenuItem1.Text = "Localidades";
+            this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.localidadesToolStripMenuItem1_Click);
+            // 
+            // cultivosToolStripMenuItem1
+            // 
+            this.cultivosToolStripMenuItem1.Name = "cultivosToolStripMenuItem1";
+            this.cultivosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cultivosToolStripMenuItem1.Text = "Cultivos";
+            this.cultivosToolStripMenuItem1.Click += new System.EventHandler(this.cultivosToolStripMenuItem1_Click);
+            // 
+            // produccionToolStripMenuItem1
+            // 
+            this.produccionToolStripMenuItem1.Name = "produccionToolStripMenuItem1";
+            this.produccionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produccionToolStripMenuItem1.Text = "Produccion";
+            this.produccionToolStripMenuItem1.Click += new System.EventHandler(this.produccionToolStripMenuItem1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -127,6 +155,9 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cultivosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem produccionToolStripMenuItem1;
     }
 }
 

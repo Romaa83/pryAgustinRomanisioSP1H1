@@ -50,9 +50,10 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(164, 66);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(121, 20);
             this.dtpFecha.TabIndex = 14;
             // 
             // cboNombreCultivo
@@ -111,7 +112,7 @@
             // 
             // btnCargarProduccion
             // 
-            this.btnCargarProduccion.Location = new System.Drawing.Point(291, 183);
+            this.btnCargarProduccion.Location = new System.Drawing.Point(210, 183);
             this.btnCargarProduccion.Name = "btnCargarProduccion";
             this.btnCargarProduccion.Size = new System.Drawing.Size(75, 23);
             this.btnCargarProduccion.TabIndex = 16;
@@ -123,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 218);
+            this.ClientSize = new System.Drawing.Size(297, 218);
             this.Controls.Add(this.btnCargarProduccion);
             this.Controls.Add(this.nudCantidadProduccion);
             this.Controls.Add(this.dtpFecha);

@@ -37,7 +37,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(130, 138);
+            this.btnCrear.Location = new System.Drawing.Point(130, 107);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 9;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 201);
+            this.ClientSize = new System.Drawing.Size(241, 155);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtNombreCultivos);
             this.Controls.Add(this.txtIdentificadorCultivos);

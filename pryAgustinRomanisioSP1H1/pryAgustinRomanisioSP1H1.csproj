@@ -52,6 +52,24 @@
     <Compile Include="frmAgricultura.Designer.cs">
       <DependentUpon>frmAgricultura.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCultivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCultivos.Designer.cs">
+      <DependentUpon>frmConsultaCultivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaLocalidades.Designer.cs">
+      <DependentUpon>frmConsultaLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaProduccion.Designer.cs">
+      <DependentUpon>frmConsultaProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCultivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgricultura.resx">
       <DependentUpon>frmAgricultura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCultivos.resx">
+      <DependentUpon>frmConsultaCultivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaLocalidades.resx">
+      <DependentUpon>frmConsultaLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaProduccion.resx">
+      <DependentUpon>frmConsultaProduccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCultivos.resx">
       <DependentUpon>frmCultivos.cs</DependentUpon>

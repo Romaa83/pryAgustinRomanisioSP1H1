@@ -23,7 +23,7 @@ namespace pryAgustinRomanisioSP1H1
             StreamReader lectorLocalidad = new StreamReader("./localidades.txt");
             StreamReader lectorProduccion = new StreamReader("./cultivos.txt");
             char separador = Convert.ToChar(",");
-            StreamWriter Produccion = new StreamWriter("./Produccion.txt");
+            StreamWriter Produccion = new StreamWriter("./Produccion.txt", true);
             Produccion.Close();
 
             while (!lectorLocalidad.EndOfStream)
@@ -50,7 +50,7 @@ namespace pryAgustinRomanisioSP1H1
         {
 
             StreamWriter swProduccion = new StreamWriter("./Produccion.txt", true);
-            swProduccion.WriteLine("Localidad: " + cboNombreLocalidad.Text + " " + "Cultivo: " +  cboNombreCultivo.Text + " " + "Cantidad: " + nudCantidadProduccion.Value);
+            swProduccion.WriteLine(cboNombreLocalidad.Text + "," + dtpFecha.Text + "," + cboNombreCultivo.Text + "," + nudCantidadProduccion.Value);
             MessageBox.Show("Nice");
             swProduccion.Close();
         }

@@ -39,5 +39,23 @@ namespace pryAgustinRomanisioSP1H1
         {
             this.Close();
         }
+
+        private void localidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaLocalidades frmConsultaLocalidades = new frmConsultaLocalidades();
+            frmConsultaLocalidades.ShowDialog();
+        }
+
+        private void produccionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaProduccion frmConsultaProduccion = new frmConsultaProduccion();
+            frmConsultaProduccion.ShowDialog();
+        }
+
+        private void cultivosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaCultivos frmConsultaCultivos = new frmConsultaCultivos();
+            frmConsultaCultivos.ShowDialog();
+        }
     }
 }
