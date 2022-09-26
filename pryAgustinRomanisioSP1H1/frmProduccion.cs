@@ -23,8 +23,6 @@ namespace pryAgustinRomanisioSP1H1
             StreamReader lectorLocalidad = new StreamReader("./localidades.txt");
             StreamReader lectorProduccion = new StreamReader("./cultivos.txt");
             char separador = Convert.ToChar(",");
-            StreamWriter Produccion = new StreamWriter("./Produccion.txt", true);
-            Produccion.Close();
 
             while (!lectorLocalidad.EndOfStream)
             {
