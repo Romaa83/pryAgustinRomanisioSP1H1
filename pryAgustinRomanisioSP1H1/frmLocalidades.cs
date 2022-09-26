@@ -28,8 +28,8 @@ namespace pryAgustinRomanisioSP1H1
             idLocalidad = Convert.ToInt32(txtIDLocalidad.Text);
             NombLocalidad = txtNombreLocalidad.Text;
 
-            StreamWriter cultivo = new StreamWriter("./Localidades.txt", true);
-            cultivo.Close();
+            StreamWriter localidades = new StreamWriter("./Localidades.txt", true);
+            localidades.Close();
 
             if (idLocalidad != 0 && NombLocalidad != "")
             {
