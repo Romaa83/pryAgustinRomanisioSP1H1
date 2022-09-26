@@ -22,9 +22,9 @@ namespace pryAgustinRomanisioSP1H1
 
         private void btnConsultarProduccion_Click(object sender, EventArgs e)
         {
+            dgvConsultaProduccion.Rows.Clear();
             if (File.Exists("./Produccion.txt"))
             {
-                dgvConsultaProduccion.Rows.Clear();
                 StreamReader srConsultaProduccion = new StreamReader("./Produccion.txt");
                 char separador = Convert.ToChar(",");
                 int fm = 0;

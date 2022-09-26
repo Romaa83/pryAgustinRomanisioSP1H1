@@ -28,7 +28,7 @@ namespace pryAgustinRomanisioSP1H1
             idLocalidad = Convert.ToInt32(txtIDLocalidad.Text);
             NombLocalidad = txtNombreLocalidad.Text;
 
-            TextWriter cultivo = new StreamWriter("./Localidades.txt", true);
+            StreamWriter cultivo = new StreamWriter("./Localidades.txt", true);
             cultivo.Close();
 
             if (idLocalidad != 0 && NombLocalidad != "")
@@ -47,14 +47,15 @@ namespace pryAgustinRomanisioSP1H1
                     }
                 }
                 srLocalidad.Close();
-                using (StreamWriter swLocalidades = File.AppendText("./Localidades.txt"))
-                {
+                    StreamWriter swLocalidades = new StreamWriter("./Localidades.txt", true);
+                
                     if (bandera == false)
                     {
                         swLocalidades.WriteLine(datos);
                         MessageBox.Show("Datos Agregados con exito");
                     }
-                }
+                    swLocalidades.Close();
+                
             }
 
         }

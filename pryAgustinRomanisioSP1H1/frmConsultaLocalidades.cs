@@ -22,6 +22,7 @@ namespace pryAgustinRomanisioSP1H1
 
         private void btnConsultaLocalidades_Click(object sender, EventArgs e)
         {
+            dgvConsultaLocalidades.Rows.Clear();
             if (File.Exists("./Localidades.txt"))
             {
                 StreamReader srConsultaLocalidades = new StreamReader("./Localidades.txt");
@@ -32,7 +33,6 @@ namespace pryAgustinRomanisioSP1H1
                     string[] arrayConsultaLocalidades = srConsultaLocalidades.ReadLine().Split(separador);
                     matLocalidades[fm, 0] = arrayConsultaLocalidades[0];
                     matLocalidades[fm, 1] = arrayConsultaLocalidades[1];
-                    dgvConsultaLocalidades.Rows.Clear();
                     dgvConsultaLocalidades.Rows.Add(matLocalidades[fm, 0], matLocalidades[fm, 1]);
                     fm++;
                 }

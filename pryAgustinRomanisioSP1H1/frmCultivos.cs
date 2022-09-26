@@ -28,7 +28,7 @@ namespace pryAgustinRomanisioSP1H1
             NombreCultivos = txtNombreCultivos.Text;
 
             //File.Create("./Cultivos.txt");
-            TextWriter cultivo = new StreamWriter("./Cultivos.txt",true);
+            StreamWriter cultivo = new StreamWriter("./Cultivos.txt",true);
             cultivo.Close();
             if (idCultivos != 0 && NombreCultivos != "")
             {
