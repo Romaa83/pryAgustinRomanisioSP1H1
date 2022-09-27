@@ -74,7 +74,7 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dgvConsultaCultivos);
             this.Name = "frmConsultaCultivos";
-            this.Text = "frmConsultaCultivos";
+            this.Text = "Consulta Cultivos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaCultivos)).EndInit();
             this.ResumeLayout(false);
 

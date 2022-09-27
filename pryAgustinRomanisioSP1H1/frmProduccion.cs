@@ -20,23 +20,31 @@ namespace pryAgustinRomanisioSP1H1
 
         private void frmProduccion_Load(object sender, EventArgs e)
         {
-            StreamReader lectorLocalidad = new StreamReader("./localidades.txt");
-            StreamReader lectorProduccion = new StreamReader("./cultivos.txt");
-            char separador = Convert.ToChar(",");
-
-            while (!lectorLocalidad.EndOfStream)
+            if (File.Exists("./Cultivos.txt") && File.Exists("./Localidades.txt"))
             {
-                string [] informacionLocalidad = lectorLocalidad.ReadLine().Split(separador);
-                cboNombreLocalidad.Items.Add(informacionLocalidad[1]);
+                StreamReader lectorLocalidad = new StreamReader("./localidades.txt");
+                StreamReader lectorProduccion = new StreamReader("./cultivos.txt");
+                char separador = Convert.ToChar(",");
+
+                while (!lectorLocalidad.EndOfStream)
+                {
+                    string[] informacionLocalidad = lectorLocalidad.ReadLine().Split(separador);
+                    cboNombreLocalidad.Items.Add(informacionLocalidad[1]);
+                }
+                while (!lectorProduccion.EndOfStream)
+                {
+                    string[] informacionCultivos = lectorProduccion.ReadLine().Split(separador);
+                    cboNombreCultivo.Items.Add(informacionCultivos[1]);
+                }
+
+
+                lectorLocalidad.Close();
             }
-            while (!lectorProduccion.EndOfStream)
+            else
             {
-                string [] informacionCultivos = lectorProduccion.ReadLine().Split(separador);
-                cboNombreCultivo.Items.Add(informacionCultivos[1]);
+                MessageBox.Show("Los archivos no existen, asegure de cargarlos");
             }
 
-
-            lectorLocalidad.Close();
         }
 
         private void nudCantidadProduccion_ValueChanged(object sender, EventArgs e)
@@ -46,11 +54,18 @@ namespace pryAgustinRomanisioSP1H1
 
         private void btnCargarProduccion_Click(object sender, EventArgs e)
         {
+            if (dtpFecha.Value < DateTime.Today)
+            {
+                StreamWriter swProduccion = new StreamWriter("./Produccion.txt", true);
+                swProduccion.WriteLine(cboNombreLocalidad.Text + "," + dtpFecha.Text + "," + cboNombreCultivo.Text + "," + nudCantidadProduccion.Value);
+                MessageBox.Show("Nice");
+                swProduccion.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una fecha valida");
+            }
 
-            StreamWriter swProduccion = new StreamWriter("./Produccion.txt", true);
-            swProduccion.WriteLine(cboNombreLocalidad.Text + "," + dtpFecha.Text + "," + cboNombreCultivo.Text + "," + nudCantidadProduccion.Value);
-            MessageBox.Show("Nice");
-            swProduccion.Close();
         }
     }
 }
